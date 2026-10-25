@@ -48,14 +48,11 @@ body{overflow-x:hidden}
 .category-header-title{font-family:cairo-bold,cairo-semibold,sans-serif;font-size:18px;color:#fff;font-weight:700}
 .category-header-count{font-family:cairo-regular,sans-serif;font-size:13px;color:#fff;opacity:0.85}
 .products-page-title{font-family:cairo-bold,cairo-semibold,sans-serif;font-size:22px;color:rgb(7,7,7);margin:16px 0 8px;padding:0 12px}
-.banner-slider{position:relative;width:100%;overflow:hidden;margin:0;border-radius:0}
-.banner-track{display:flex;transition:transform .6s ease;width:400%}
-.banner-slide{width:25%;flex-shrink:0}
-.banner-slide img{width:100%;height:200px;object-fit:cover;display:block}
-.banner-dots{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:8px;z-index:2}
-.banner-dot{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,0.5);border:none;cursor:pointer;padding:0;transition:background .3s}
-.banner-dot.active{background:#fff}
-@media(min-width:600px){.banner-slide img{height:300px}}
+.hero-banner{overflow:hidden;position:relative;margin:8px 16px;border-radius:12px}
+.hero-banner .slick-track{display:flex!important;flex-wrap:nowrap!important;width:400%!important;animation:hero-slide-4 12s ease-in-out infinite!important}
+.hero-banner .slick-slide{width:25%!important;min-width:25%!important;max-width:25%!important;display:block!important;flex-shrink:0!important;float:none!important;box-sizing:border-box;padding:0}
+.hero-banner .slick-slide img{border-radius:12px!important;width:100%!important;height:auto!important}
+@keyframes hero-slide-4{0%,18%{transform:translateX(0)}25%,43%{transform:translateX(-25%)}50%,68%{transform:translateX(-50%)}75%,93%{transform:translateX(-75%)}100%{transform:translateX(0)}}
 .cart-badge{background:#e53935;color:#fff;font-size:11px;font-weight:700;min-width:18px;height:18px;border-radius:50%;display:none;align-items:center;justify-content:center;position:absolute;top:-6px;right:-6px;line-height:1}
 .cart-box{position:relative!important}
 .cart-drawer-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);z-index:1000;display:none;opacity:0;transition:opacity .3s}
@@ -83,15 +80,7 @@ body{overflow-x:hidden}
 .cart-checkout-btn{width:100%;padding:12px;background:#5d9e2f;color:#fff;border:none;border-radius:12px;font-family:cairo-bold,sans-serif;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px}
 .cart-checkout-btn:active{background:#4a8526}
 </style></head><body style=""><div id="__next" aria-hidden="true"><div class="mega-menu-sidebar sidebar sidebar--rtl"><div class="mega-menu-sidebar__header"><button class="mega-menu-sidebar__button" aria-label="open-navigation" style="color:rgb(7,7,7)"><img alt="icon-exit" loading="lazy" width="24" height="24" decoding="async" data-nimg="1" src="https://novawater.com/assets/images/icon/exit.svg" style="color:transparent"></button><span class="mega-menu-sidebar__header-title" style="color:rgb(7,7,7)">القائمة</span></div><div class="mega-menu-sidebar__navigation-switcher"><div class="mega-menu-sidebar__item-container"><div class="styles_searchProductContainer__86fwA styles_searchProductContainerRtl__DAh0q input-search"><div class="styles_searchInputGroup__G9HvP" style="color:rgb(7,7,7)"><input placeholder="البحث عن المنتج" value="" style="color:rgb(7,7,7)"><button class="styles_searchButton__kc9h7 styles_searchButtonRtl__JHo7b"><img alt="search" loading="lazy" width="15" height="15" decoding="async" data-nimg="1" src="https://novawater.com/assets/images/icon/search.svg" style="color:transparent"></button></div></div></div><a class="mega-menu-sidebar__item-container" href="index.html" style="color:rgb(7,7,7)"><div class="group-icon"><div class="bg-icon-menu"><img alt="icon" loading="lazy" width="20" height="20" decoding="async" data-nimg="1" src="https://novawater.com/assets/images/homeMenu.svg" style="color:transparent"></div><span>المنزل</span></div></a><a class="mega-menu-sidebar__item-container" href="products.html" style="color:rgb(7,7,7)"><div class="group-icon"><div class="bg-icon-menu"><img alt="icon" loading="lazy" width="20" height="20" decoding="async" data-nimg="1" src="https://novawater.com/assets/images/icon/cart-blue.svg" style="color:transparent"></div><span>المنتجات</span></div></a><a class="mega-menu-sidebar__item-container" href="https://novawater.com/blog" style="color:rgb(7,7,7)"><div class="group-icon"><div class="bg-icon-menu"><img alt="icon" loading="lazy" width="20" height="20" decoding="async" data-nimg="1" src="https://novawater.com/assets/images/icon/edit.svg" style="color:transparent"></div><span>الأخبار</span></div></a><a class="mega-menu-sidebar__item-container" href="https://novawater.com/contact-us" style="color:rgb(7,7,7)"><div class="group-icon"><div class="bg-icon-menu"><img alt="icon" loading="lazy" width="20" height="20" decoding="async" data-nimg="1" src="https://novawater.com/assets/images/letter.svg" style="color:transparent"></div><span>اتصل بنا</span></div></a></div></div><div class="styles_headerContainer__xpJTP"><div class="header" style="background:white"><div class="topbar"><div class="topbar-content"><div class="mobile-content"></div></div></div><div class="main-header"><div class="main-header__content"><div class="mobile-content"><a class="styles_headerLogo__V4hiv" href="index.html"><div class="styles_logoImageMobile__it5X2"><img loading="eager" src="https://novacp.novawater.com/media/logo/stores/2/EN_4x.png" alt="logo" width="255" height="215"></div></a><div class="styles_toggleButtonContainer__cYW9E"><div class="styles_buttonGroup__d0_nX"><div class="header__item"><a href="products.html" style="text-decoration:none"><span class="d-flex align-items-center"><div class="cart-box" id="open-cart-btn" style="cursor:pointer"><span class="cart-badge" id="cart-badge">0</span><span>السلة</span><span class="image-container-2"><img alt="cart" loading="eager" width="20" height="20" decoding="async" data-nimg="1" src="https://novawater.com/assets/images/icon/cart-white.svg" style="color:transparent"></span></div></span></a></div></div><button class="button button--transparent p-0 toggle-sidebar-button" aria-label="toggle-search"><img loading="eager" src="https://novawater.com/assets/images/icon/toggle-sidebar.svg" class="img-fluid" alt="" width="24" height="24"></button></div></div></div></div></div></div><div class="main-page-content" style="min-height:calc(-350px + 100vh);background-color:white"><div class="DeliverToButton_container__MvDZH"><div class="DeliverToButton_deliveryInfo__7gI0w"><span class="DeliverToButton_deliveryInfoIcon__iqhtt"><img alt="icon" loading="lazy" width="24" height="24" decoding="async" data-nimg="1" class="img-fluid" src="https://novawater.com/assets/images/icon/truck.svg" style="color:transparent"></span><span class="DeliverToButton_deliveryInfoText__GaYZx">يختلف توفر المنتجات وخدمة التوصيل حسب الموقع</span></div><button class="DeliverToButton_locationButton__qoJhA"><img alt="icon" loading="lazy" width="20" height="20" decoding="async" data-nimg="1" class="img-fluid" src="https://novawater.com/assets/images/icon/address-white.svg" style="color:transparent"><span>توصيل إلى:</span><span class="DeliverToButton_addressTitle__xnBvD">يرجى اختيار</span><span class="DeliverToButton_chevron__xjPzW"><img alt="icon" loading="lazy" width="16" height="16" decoding="async" data-nimg="1" class="img-fluid" src="https://novawater.com/assets/images/icon/chevron-bottom.svg" style="color:transparent"></span></button></div>
-<div class="banner-slider" id="banner-slider">
-<div class="banner-track" id="banner-track">
-<div class="banner-slide"><img src="images/banner1.jpg" alt="Nova Water"></div>
-<div class="banner-slide"><img src="images/banner2.jpg" alt="Nova Water"></div>
-<div class="banner-slide"><img src="images/banner3.jpg" alt="Nova Water"></div>
-<div class="banner-slide"><img src="images/banner4.jpg" alt="Nova Water"></div>
-</div>
-<div class="banner-dots"><button class="banner-dot active" data-idx="0"></button><button class="banner-dot" data-idx="1"></button><button class="banner-dot" data-idx="2"></button><button class="banner-dot" data-idx="3"></button></div>
-</div>
+<div class="hero-banner"><div class="slick-list"><div class="slick-track"><div class="slick-slide"><div><a href="products.html" style="width:100%;display:inline-block"><img alt="Nova Water" loading="eager" width="1920" height="1080" src="images/banner1.jpg" style="width:100%;height:auto"></a></div></div><div class="slick-slide"><div><a href="products.html" style="width:100%;display:inline-block"><img alt="Nova Water" loading="lazy" width="1920" height="1080" src="images/banner2.jpg" style="width:100%;height:auto"></a></div></div><div class="slick-slide"><div><a href="products.html" style="width:100%;display:inline-block"><img alt="Nova Water" loading="lazy" width="1920" height="1080" src="images/banner3.jpg" style="width:100%;height:auto"></a></div></div><div class="slick-slide"><div><a href="products.html" style="width:100%;display:inline-block"><img alt="Nova Water" loading="lazy" width="1920" height="1080" src="images/banner4.jpg" style="width:100%;height:auto"></a></div></div></div></div></div>
 <div class="container" style="padding:0">
 <h2 class="products-page-title">المنتجات</h2><div class="category-section"><div class="category-header" style="background-color:#A0D5F4"><span class="category-header-title">المجموعة الأساسية</span><span class="category-header-count">10 منتجات</span></div><div class="nova-product-grid">
 <div class="nova-product-cell"><div><div class="styles_productItem__ikSUC"><div class="styles_productImageContainer__pLIJr"><div class="styles_imageContainer__JSNqS h-100 w-100"><a href="#"><img alt="مياه نوفا، حزمة 1.5 لتر، 6 عبوة" loading="lazy" decoding="async" data-nimg="fill" src="https://novacp.novawater.com/media/catalog/product/n/o/nova-water_-1.5l-shrink-wrap_-6-bottles_1.jpg" style="position:absolute;height:100%;width:100%;inset:0px;color:transparent"></a></div></div><div class="styles_informationContainer__uVK0M"><div class="undefined undefined"></div><div><a class="styles_nameContainer__kaTxJ" href="#"><h3 style="color:rgb(7,7,7)">مياه نوفا، حزمة 1.5 لتر، 6 عبوة</h3></a></div><div class="styles_priceContainer__GXliw"><span class="styles_items__RAFZU"></span><span class="styles_price____YN0"><span class="styles_price__FDevC"><span><span class=""><span dir="rtl"><span><span>&nbsp;</span><span>8</span><span>.</span><span>46</span></span><span>&nbsp;</span><img src="https://novawater.com/assets/images/currency-symbol.png" width="20" height="20"></span></span></span></span></span></div><div class="styles_actionWrapper__t57SF"><button class="styles_addToBasketBtn__NeXOK">أضف الى السلة</button></div></div></div></div></div>
@@ -288,27 +277,6 @@ var b=this;setTimeout(function(){b.textContent='أضف الى السلة';b.styl
 
 renderCart();
 
-var bannerTrack=document.getElementById('banner-track');
-var bannerDots=document.querySelectorAll('.banner-dot');
-var currentSlide=0;
-var totalSlides=4;
-var bannerInterval;
-function goToSlide(idx){
-currentSlide=idx;
-bannerTrack.style.transform='translateX('+(-idx*25)+'%)';
-bannerDots.forEach(function(d,i){d.classList.toggle('active',i===idx)});
-}
-function nextSlide(){goToSlide((currentSlide+1)%totalSlides)}
-function startBanner(){bannerInterval=setInterval(nextSlide,3500)}
-function stopBanner(){clearInterval(bannerInterval)}
-bannerDots.forEach(function(dot){
-dot.addEventListener('click',function(){goToSlide(parseInt(this.getAttribute('data-idx')));stopBanner();startBanner()})
-});
-var slider=document.getElementById('banner-slider');
-var touchStartX=0;
-slider.addEventListener('touchstart',function(e){touchStartX=e.touches[0].clientX;stopBanner()},{passive:true});
-slider.addEventListener('touchend',function(e){var diff=touchStartX-e.changedTouches[0].clientX;if(Math.abs(diff)>40){if(diff>0)goToSlide(Math.min(currentSlide+1,totalSlides-1));else goToSlide(Math.max(currentSlide-1,0))}startBanner()},{passive:true});
-startBanner();
 })();
 </script>
 </body></html>
