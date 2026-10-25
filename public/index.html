@@ -153,13 +153,17 @@ body.modal-open{overflow:auto!important;position:static!important}
 body{overflow-x:hidden}
 
 .main-header__content .mobile-content{
-  flex-direction:row-reverse!important;
-}
-.styles_toggleButtonContainer__cYW9E{
-  flex-direction:row-reverse!important;
+  position:relative!important;
 }
 .toggle-sidebar-button{
-  order:-1!important;
+  position:absolute!important;
+  right:16px!important;
+  top:50%!important;
+  transform:translateY(-50%)!important;
+  z-index:10!important;
+}
+.styles_toggleButtonContainer__cYW9E{
+  margin-left:auto!important;
 }
 
 </style>
