@@ -5,6 +5,12 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>المنتجات | نوڤا ووتر</title>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style id="style-font-config">
+@font-face{font-family:cairo-regular;src:url('https://novacp.novawater.com/media/snaptec/font/stores/2/Cairo-Regular.ttf')}
+@font-face{font-family:cairo-bold;src:url('https://novacp.novawater.com/media/snaptec/font/stores/2/Cairo-Bold.ttf')}
+@font-face{font-family:cairo-semibold;src:url('https://novacp.novawater.com/media/snaptec/font/stores/2/Cairo-SemiBold.ttf')}
+html body{font-family:cairo-regular,'Cairo','Segoe UI',Tahoma,sans-serif}
+</style>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'Cairo','Segoe UI',Tahoma,sans-serif;background:#fff;color:#1a1a2e;overflow-x:hidden}
@@ -139,39 +145,154 @@ a{text-decoration:none;color:inherit}
   .products-grid{grid-template-columns:repeat(4,1fr)}
   .p-card-img{height:190px}
 }
+
+/* ── Nova Header (from index.html) ── */
+.mega-menu-sidebar{display:none;position:fixed;top:0;right:0;width:300px;max-width:85vw;height:100vh;background:#fff;z-index:300;transform:translateX(100%);transition:transform .3s;overflow-y:auto;box-shadow:-4px 0 20px rgba(0,0,0,.1)}
+.mega-menu-sidebar.open{display:block;transform:translateX(0)}
+.mega-menu-sidebar-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:299}
+.mega-menu-sidebar-overlay.open{display:block}
+.mega-menu-sidebar__header{padding:14px 16px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #eee}
+.mega-menu-sidebar__header-title{font-size:17px;font-weight:800;color:#070707}
+.mega-menu-sidebar__button{background:none;border:none;cursor:pointer;padding:4px}
+.mega-menu-sidebar__button img{width:24px;height:24px}
+.mega-menu-sidebar__navigation-switcher{}
+.mega-menu-sidebar__item-container{display:flex;align-items:center;gap:10px;padding:13px 16px;font-size:14px;font-weight:600;border-bottom:1px solid #f5f5f5;color:#070707;cursor:pointer;text-decoration:none;background:none;border-left:none;border-right:none;border-top:none;width:100%;font-family:inherit}
+.mega-menu-sidebar__item-container:hover{background:#f8f9fa}
+.group-icon{display:flex;align-items:center;gap:10px}
+.bg-icon-menu{width:32px;height:32px;background:#f0f7ff;border-radius:8px;display:flex;align-items:center;justify-content:center}
+.bg-icon-menu img{width:20px;height:20px}
+.styles_searchProductContainer__86fwA{padding:8px 16px}
+.styles_searchInputGroup__G9HvP{display:flex;align-items:center;background:#f5f5f5;border-radius:25px;padding:6px 12px}
+.styles_searchInputGroup__G9HvP input{flex:1;border:none;background:transparent;outline:none;font-family:inherit;font-size:13px;padding:4px}
+.styles_searchButton__kc9h7{background:none;border:none;cursor:pointer;padding:4px}
+.styles_searchButton__kc9h7 img{width:15px;height:15px}
+.styles_autoCompleteHook__b6OEW{display:none}
+.language-trigger{display:flex;align-items:center}
+.language-trigger__language{font-size:13px;font-weight:600}
+.top-bar__item{font-size:13px}
+
+.styles_headerContainer__xpJTP{position:sticky;top:0;z-index:100;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.06)}
+.styles_headerContainer__xpJTP .header{background:#fff}
+.topbar{display:none}
+.main-header{padding:10px 16px}
+.main-header__content{}
+.main-header__content .mobile-content{display:flex!important;align-items:center!important;justify-content:space-between!important}
+.styles_headerLogo__V4hiv{order:-1!important;text-decoration:none}
+.styles_logoImageMobile__it5X2 img{height:42px;width:auto}
+.styles_toggleButtonContainer__cYW9E{display:contents!important}
+.styles_buttonGroup__d0_nX{order:1!important}
+.toggle-sidebar-button{order:-2!important;background:none;border:none;cursor:pointer;padding:4px}
+.toggle-sidebar-button img{width:24px;height:24px}
+.button--transparent{background:transparent;border:none}
+.header__item{}
+.d-flex{display:flex!important}
+.align-items-center{align-items:center!important}
+.p-0{padding:0!important}
+.cart-box{display:flex;align-items:center;gap:6px;background:linear-gradient(135deg,#0077b6,#00b4d8);color:#fff;border-radius:25px;padding:8px 18px;font-size:13px;font-weight:700;cursor:pointer}
+.cart-box .image-container-2{display:flex;align-items:center}
+.cart-box .image-container-2 img{filter:brightness(10);width:20px!important;height:20px!important}
+
+.DeliverToButton_container__MvDZH{background:#f8f9fa;padding:8px 16px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;border-bottom:1px solid #eee}
+.DeliverToButton_deliveryInfo__7gI0w{display:flex;align-items:center;gap:6px}
+.DeliverToButton_deliveryInfoIcon__iqhtt img{width:24px;height:24px}
+.DeliverToButton_deliveryInfoText__GaYZx{font-size:12px;color:#555}
+.DeliverToButton_locationButton__qoJhA{display:flex;align-items:center;gap:5px;background:#0077b6;color:#fff;border:none;border-radius:20px;padding:5px 14px;font-size:11px;font-weight:600;cursor:pointer;font-family:inherit}
+.DeliverToButton_locationButton__qoJhA img{width:20px;height:20px}
+.DeliverToButton_addressTitle__xnBvD{font-weight:400}
+.DeliverToButton_chevron__xjPzW img{width:16px;height:16px}
+.img-fluid{max-width:100%;height:auto}
+
+/* ── Nova Footer (from index.html) ── */
+.footer-container{direction:rtl}
+.footer.footer--mobile.background--white{background-color:#418fde!important;color:#fff!important;padding:28px 16px 0}
+.footer-socials-container{text-align:center;padding-bottom:16px}
+.footer-socials p{margin:0;display:flex;justify-content:center;flex-wrap:wrap;gap:6px}
+.social-image-container{display:inline-block}
+.social-image-container a{display:inline-block}
+.social-image-container img{width:36px;height:36px;border-radius:50%}
+.footer-links-container{padding:10px 0}
+.footer-links{max-width:600px;margin:0 auto;text-align:center}
+.link-group-header{display:flex;justify-content:center;margin-bottom:12px}
+.link-group-header .link-item img{width:60px;height:50px}
+.title-container{background:none;border:none;width:100%;padding:10px 16px;cursor:pointer;color:#fff;font-family:inherit;font-size:14px;font-weight:600;text-align:right}
+.title-content-wrapper{display:flex;align-items:center;justify-content:space-between;width:100%}
+.title-content{color:#fff}
+.icon-chevron{width:14px;height:14px;filter:brightness(10);transition:transform .3s}
+.content-container{display:none;padding:0 16px}
+.content-container.open{display:block}
+.content-container a{display:block;color:rgba(255,255,255,.8);font-size:12px;padding:4px 0;text-decoration:none}
+.content-container a:hover{color:#fff}
+.section{border-bottom:1px solid rgba(255,255,255,.15)}
+.link-image{display:inline-block}
+.link-image img{border-radius:6px}
+.card-list{display:flex;justify-content:center;gap:10px;padding:14px 16px;flex-wrap:wrap;position:relative!important}
+.card-image-container img{width:35px;height:24px;border-radius:4px}
+.footer-sub-container{padding:14px 16px;border-top:1px solid rgba(255,255,255,.15)}
+.footer-sub{text-align:center}
+.sub-details{font-size:11px;color:rgba(255,255,255,.6)}
+.image-container{display:inline-block}
 </style>
 </head>
 <body>
 
-<!-- ═══ Header ═══ -->
-<header class="header">
-  <div class="header-inner">
-    <div class="header-right">
-      <button class="menu-btn" onclick="toggleMenu()" aria-label="القائمة">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#333" stroke-width="2.2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-      </button>
-      <a href="index.html" class="logo"><img src="https://novacp.novawater.com/media/logo/stores/2/EN_4x.png" alt="نوڤا ووتر"></a>
-    </div>
-    <div class="header-left">
-      <button class="lang-btn">EN</button>
-      <button class="cart-btn" onclick="toggleCart()">
-        <span>اطلب الآن</span>
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="#fff"><path d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM7.17 14.75l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0020 4H5.21l-.94-2H1v2h2l3.6 7.59-1.35 2.45C5.09 14.32 5 14.65 5 15c0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25z"/></svg>
-        <span class="cart-count" id="cartCount">0</span>
-      </button>
-    </div>
+<!-- ═══ Header (same as index.html) ═══ -->
+<div class="mega-menu-sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
+<div class="mega-menu-sidebar" id="megaSidebar">
+  <div class="mega-menu-sidebar__header">
+    <button class="mega-menu-sidebar__button" onclick="toggleSidebar()"><img alt="icon-exit" width="24" height="24" src="https://novawater.com/assets/images/icon/exit.svg" style="color:transparent"></button>
+    <span class="mega-menu-sidebar__header-title" style="color:#070707">القائمة</span>
   </div>
-</header>
+  <div class="mega-menu-sidebar__navigation-switcher">
+    <div class="mega-menu-sidebar__item-container">
+      <div class="styles_searchProductContainer__86fwA styles_searchProductContainerRtl__DAh0q">
+        <div class="styles_searchInputGroup__G9HvP" style="color:#070707">
+          <input placeholder="البحث عن المنتج" value="">
+          <button class="styles_searchButton__kc9h7"><img alt="search" width="15" height="15" src="https://novawater.com/assets/images/icon/search.svg" style="color:transparent"></button>
+        </div>
+      </div>
+    </div>
+    <a class="mega-menu-sidebar__item-container" href="index.html" style="color:#070707"><div class="group-icon"><div class="bg-icon-menu"><img alt="icon" width="20" height="20" src="https://novawater.com/assets/images/homeMenu.svg" style="color:transparent"></div><span>المنزل</span></div></a>
+    <a class="mega-menu-sidebar__item-container" href="#" style="color:#070707"><div class="group-icon"><div class="bg-icon-menu"><img alt="icon" width="20" height="20" src="https://novawater.com/assets/images/blue-star.svg" style="color:transparent"></div><span>حول نوفا</span></div></a>
+    <a class="mega-menu-sidebar__item-container" href="products.html" style="color:#070707"><div class="group-icon"><div class="bg-icon-menu"><img alt="icon" width="20" height="20" src="https://novawater.com/assets/images/icon/cart-blue.svg" style="color:transparent"></div><span>المنتجات</span></div></a>
+    <a class="mega-menu-sidebar__item-container" href="#" style="color:#070707"><div class="group-icon"><div class="bg-icon-menu"><img alt="icon" width="20" height="20" src="https://novawater.com/assets/images/icon/edit.svg" style="color:transparent"></div><span>الأخبار</span></div></a>
+    <a class="mega-menu-sidebar__item-container" href="#" style="color:#070707"><div class="group-icon"><div class="bg-icon-menu"><img alt="icon" width="20" height="20" src="https://novawater.com/assets/images/letter.svg" style="color:transparent"></div><span>اتصل بنا</span></div></a>
+    <div class="mega-menu-sidebar__item-container"><div><a class="d-flex align-items-center" style="text-decoration:none;color:#070707"><div style="display:flex;flex-direction:row;justify-content:center;align-items:center"><span class="image-container bg-icon-menu"><img alt="myaccount" width="20" height="20" src="https://novawater.com/assets/images/icon/account/user-2.svg" style="color:transparent"></span><span style="margin-inline-start:10px">تسجيل الدخول</span></div></a></div></div>
+    <button class="mega-menu-sidebar__item-container"><div class="group-icon"><div class="bg-icon-menu"><img alt="icon" width="20" height="20" src="https://novawater.com/assets/images/earth.svg" style="color:transparent"></div><div class="language-trigger"><span class="language-trigger__language"><span class="top-bar__item">EN</span></span></div></div></button>
+  </div>
+</div>
 
-<!-- ═══ Delivery Bar ═══ -->
-<div class="delivery-bar">
-  <div class="delivery-info">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="#0077b6"><path d="M18 18.5c.83 0 1.5-.67 1.5-1.5s-.67-1.5-1.5-1.5-1.5.67-1.5 1.5.67 1.5 1.5 1.5zm1.5-9H17V12h4.46L19.5 9.5zM6 18.5c.83 0 1.5-.67 1.5-1.5S6.83 15.5 6 15.5 4.5 16.17 4.5 17 5.17 18.5 6 18.5zM20 8l3 4v5h-2c0 1.66-1.34 3-3 3s-3-1.34-3-3H9c0 1.66-1.34 3-3 3s-3-1.34-3-3H1V6c0-1.11.89-2 2-2h14v4h3z"/></svg>
-    <span>يختلف توفر المنتجات وخدمة التوصيل حسب الموقع</span>
+<div class="styles_headerContainer__xpJTP">
+  <div class="header" style="background:white">
+    <div class="main-header">
+      <div class="main-header__content">
+        <div class="mobile-content">
+          <a class="styles_headerLogo__V4hiv" href="index.html"><div class="styles_logoImageMobile__it5X2"><img loading="eager" src="https://novacp.novawater.com/media/logo/stores/2/EN_4x.png" alt="logo" width="255" height="215"></div></a>
+          <div class="styles_toggleButtonContainer__cYW9E">
+            <div class="styles_buttonGroup__d0_nX">
+              <div class="header__item">
+                <a href="#" onclick="toggleCart();return false" style="text-decoration:none"><span class="d-flex align-items-center"><div class="cart-box"><span>اطلب الآن</span><span class="image-container-2"><img alt="cart" width="20" height="20" src="https://novawater.com/assets/images/icon/cart-white.svg" style="color:transparent"></span></div></span></a>
+                <span class="cart-count" id="cartCount" style="position:absolute;top:-5px;right:-5px;background:#e53935;color:#fff;border-radius:50%;width:20px;height:20px;font-size:10px;font-weight:800;display:none;align-items:center;justify-content:center">0</span>
+              </div>
+            </div>
+            <button class="button button--transparent p-0 toggle-sidebar-button" aria-label="toggle-search" onclick="toggleSidebar()"><img loading="eager" src="https://novawater.com/assets/images/icon/toggle-sidebar.svg" class="img-fluid" alt="" width="24" height="24"></button>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <button class="loc-btn" onclick="document.getElementById('mapSection').scrollIntoView({behavior:'smooth'})">
-    <svg width="12" height="12" viewBox="0 0 24 24" fill="#fff"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/></svg>
-    <span>توصيل إلى: يرجى اختيار</span>
+</div>
+
+<!-- ═══ Delivery Bar (same as index.html) ═══ -->
+<div class="DeliverToButton_container__MvDZH">
+  <div class="DeliverToButton_deliveryInfo__7gI0w">
+    <span class="DeliverToButton_deliveryInfoIcon__iqhtt"><img alt="icon" width="24" height="24" class="img-fluid" src="https://novawater.com/assets/images/icon/truck.svg" style="color:transparent"></span>
+    <span class="DeliverToButton_deliveryInfoText__GaYZx">يختلف توفر المنتجات وخدمة التوصيل حسب الموقع</span>
+  </div>
+  <button class="DeliverToButton_locationButton__qoJhA" onclick="document.getElementById('mapSection').scrollIntoView({behavior:'smooth'})">
+    <img alt="icon" width="20" height="20" class="img-fluid" src="https://novawater.com/assets/images/icon/address-white.svg" style="color:transparent">
+    <span>توصيل إلى:</span>
+    <span class="DeliverToButton_addressTitle__xnBvD">يرجى اختيار</span>
+    <span class="DeliverToButton_chevron__xjPzW"><img alt="icon" width="16" height="16" class="img-fluid" src="https://novawater.com/assets/images/icon/chevron-bottom.svg" style="color:transparent"></span>
   </button>
 </div>
 
@@ -230,34 +351,65 @@ a{text-decoration:none;color:inherit}
   </div>
 </div>
 
-<!-- ═══ Footer ═══ -->
-<footer class="footer">
-  <div class="f-socials">
-    <a href="#"><img src="https://novacp.novawater.com/media/facebook.png" alt="Facebook"></a>
-    <a href="#"><img src="https://novacp.novawater.com/media/Instagram.png" alt="Instagram"></a>
-    <a href="#"><img src="https://novacp.novawater.com/media/Youtube.png" alt="YouTube"></a>
-    <a href="#"><img src="https://novacp.novawater.com/media/Twitter.png" alt="X"></a>
-    <a href="#"><img src="https://novacp.novawater.com/media/1.png" alt="TikTok"></a>
+<!-- ═══ Footer (same as index.html) ═══ -->
+<div class="footer-container"><footer class="footer footer--mobile background--white">
+  <div class="footer-socials-container">
+    <div class="footer-socials">
+      <div><p>
+        <span class="social-image-container"><a href="https://www.facebook.com/NovaWaterKSA" target="_blank" rel="noopener"><img src="https://novacp.novawater.com/media/facebook.png" width="36" height="36">&nbsp;</a></span>
+        <span class="social-image-container"><a href="https://www.instagram.com/novawaterksa/" target="_blank" rel="noopener"><img src="https://novacp.novawater.com/media/Instagram.png" width="36" height="36"></a></span>
+        <span class="social-image-container"><a href="https://www.youtube.com/@novawater_ksa" target="_blank" rel="noopener"><img src="https://novacp.novawater.com/media/Youtube.png" width="36" height="36">&nbsp;</a></span>
+        <span class="social-image-container"><a href="https://x.com/Novawaterksa" target="_blank" rel="noopener"><img src="https://novacp.novawater.com/media/Twitter.png" width="36" height="36"></a></span>
+        <span class="social-image-container"><a href="https://www.tiktok.com/@novawaterksa" target="_blank" rel="noopener"><img src="https://novacp.novawater.com/media/1.png?rand=1721876117" width="36" height="36"></a></span>
+        <span class="social-image-container"><a href="https://www.linkedin.com/company/novawaterksa/" target="_blank" rel="noopener"><img src="https://novacp.novawater.com/media/2.png?rand=1721876229" width="36" height="36"></a></span>
+        <span class="social-image-container"><a href="https://www.snapchat.com/add/novawater.ksa" target="_blank" rel="noopener"><img src="https://novacp.novawater.com/media/3.png?rand=1721876229" width="36" height="36"></a></span>
+      </p></div>
+    </div>
   </div>
-  <div class="f-links">
-    <a href="#">معلومات عنا</a>
-    <a href="#">الأخبار</a>
-    <a href="#">اتصل بنا</a>
-    <a href="#">سياسة الخصوصية</a>
+  <div class="footer-links-container">
+    <div class="footer-links">
+      <div class="link-group-header">
+        <div class="link-item"><img src="https://novacp.novawater.com/pub/media/cmsblock/images/Group.png" alt="" width="60" height="50"></div>
+      </div>
+      <div class="section">
+        <button class="title-container" onclick="this.nextElementSibling.classList.toggle('open');this.querySelector('.icon-chevron').style.transform=this.nextElementSibling.classList.contains('open')?'rotate(180deg)':''">
+          <span class="title-content-wrapper"><span class="title-content">عن نوفا</span><img class="icon-chevron" src="https://novacp.novawater.com/pub/media/cmsblock/images/chevron-down.png"></span>
+        </button>
+        <div class="content-container">
+          <a href="#">تاريخنا</a>
+          <a href="#">مصدر مياهنا</a>
+          <a href="#">الجودة</a>
+        </div>
+      </div>
+      <div class="section">
+        <button class="title-container" onclick="this.nextElementSibling.classList.toggle('open');this.querySelector('.icon-chevron').style.transform=this.nextElementSibling.classList.contains('open')?'rotate(180deg)':''">
+          <span class="title-content-wrapper"><span class="title-content">خدمة العملاء</span><img class="icon-chevron" src="https://novacp.novawater.com/pub/media/cmsblock/images/chevron-down.png"></span>
+        </button>
+        <div class="content-container">
+          <a href="#">اتصل بنا</a>
+          <a href="#">الأسئلة الشائعة</a>
+          <a href="#">سياسة الخصوصية</a>
+          <a href="#">الشروط والأحكام</a>
+        </div>
+      </div>
+      <div style="text-align:center;padding:14px 0">
+        <a class="image-container link-image" href="https://onelink.to/6pnjf7" target="_blank" rel="noopener noreferrer"><img src="https://novacp.novawater.com/pub/media/cmsblock/images/App_Store.png" alt="App Store" width="138" height="40"></a>
+        <a class="image-container link-image" href="https://onelink.to/6pnjf7" target="_blank" rel="noopener noreferrer"><img src="https://novacp.novawater.com/pub/media/cmsblock/images/Google_Play_1.png" alt="Google Play" width="138" height="40"></a>
+        <a class="image-container link-image" href="https://onelink.to/6pnjf7" target="_blank" rel="noopener noreferrer"><img src="https://novacp.novawater.com/pub/media/cmsblock/images/AppGallery.png" alt="AppGallery" width="138" height="40"></a>
+      </div>
+    </div>
   </div>
-  <div class="f-copy">&copy; 2026 نوڤا ووتر. جميع الحقوق محفوظة.</div>
-</footer>
+  <div class="card-list">
+    <span class="card-image-container"><img src="https://novacp.novawater.com/media/mada_1.jpg" alt="mada" width="35" height="24"></span>
+    <span class="card-image-container"><img src="https://novacp.novawater.com/media/cmsblock/images/STCPay_logo_1.png" alt="STC Pay" width="35" height="24"></span>
+    <span class="card-image-container"><img src="https://novacp.novawater.com/media/master.jpg" alt="Mastercard" width="35" height="24"></span>
+    <span class="card-image-container"><img src="https://novacp.novawater.com/media/visa.jpg" alt="Visa" width="35" height="24"></span>
+    <span class="card-image-container"><img src="https://novacp.novawater.com/media/applepay.jpg" alt="Apple Pay" width="35" height="24"></span>
+    <span class="card-image-container"><img src="https://novacp.novawater.com/media/cod.jpg" alt="Cash on Delivery" width="35" height="24"></span>
+  </div>
+  <div class="footer-sub-container"><div class="footer-sub"><div class="sub-details">&copy; 2026 نوفا. جميع الحقوق محفوظة.</div></div></div>
+</footer></div>
 
-<!-- ═══ Side Menu ═══ -->
-<div class="menu-ov" id="menuOv" onclick="toggleMenu()">
-  <nav class="side-menu" onclick="event.stopPropagation()">
-    <div class="sm-head"><h3>القائمة</h3><button class="sm-x" onclick="toggleMenu()">&times;</button></div>
-    <a href="index.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="#0077b6"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>المنزل</a>
-    <a href="products.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="#0077b6"><path d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM7.17 14.75l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0020 4H5.21l-.94-2H1v2h2l3.6 7.59-1.35 2.45C5.09 14.32 5 14.65 5 15c0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25z"/></svg>المنتجات</a>
-    <a href="#"><svg width="18" height="18" viewBox="0 0 24 24" fill="#0077b6"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>حول نوڤا</a>
-    <a href="#"><svg width="18" height="18" viewBox="0 0 24 24" fill="#0077b6"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>اتصل بنا</a>
-  </nav>
-</div>
 
 <!-- ═══ Cart Sidebar ═══ -->
 <div class="cart-ov" id="cartOv" onclick="toggleCart()">
@@ -302,7 +454,7 @@ function renderCart(){
   const tq=cart.reduce((s,c)=>s+c.qty,0);
   const tp=cart.reduce((s,c)=>s+c.price*c.qty,0);
   ce.textContent=tq;
-  ce.classList.toggle('show',tq>0);
+  ce.style.display=tq>0?'flex':'none';
   if(!cart.length){
     cl.innerHTML='<div class="cart-empty">السلة فارغة</div>';
     cf.style.display='none';
@@ -362,7 +514,7 @@ document.getElementById('rangeCards').addEventListener('click',function(e){
 
 /* ────── Toggles ────── */
 function toggleCart(){document.getElementById('cartOv').classList.toggle('open');}
-function toggleMenu(){document.getElementById('menuOv').classList.toggle('open');}
+function toggleSidebar(){document.getElementById('megaSidebar').classList.toggle('open');document.getElementById('sidebarOverlay').classList.toggle('open');}
 
 /* ────── Toast ────── */
 function toast(m){const t=document.getElementById('toast');t.textContent=m;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2400);}
