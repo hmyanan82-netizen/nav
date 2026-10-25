@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>منتجاتنا | نوڤا</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Segoe UI",Tahoma,Arial,sans-serif;background:#f8f9fa;color:#1a1a2e}
+
+/* Header */
+.header{
+  background:#fff;position:sticky;top:0;z-index:100;
+  box-shadow:0 2px 20px rgba(0,0,0,.06);
+}
+.header-inner{
+  max-width:1200px;margin:0 auto;padding:16px 24px;
+  display:flex;align-items:center;justify-content:space-between;
+}
+.logo{font-size:28px;font-weight:800;color:#0077b6;letter-spacing:-1px}
+.logo span{color:#00b4d8}
+nav a{
+  margin:0 16px;color:#333;text-decoration:none;font-weight:500;
+  font-size:15px;transition:color .2s;
+}
+nav a:hover,nav a.active{color:#0077b6}
+
+/* Hero */
+.hero{
+  background:linear-gradient(135deg,#0077b6 0%,#00b4d8 50%,#90e0ef 100%);
+  padding:80px 24px;text-align:center;color:#fff;
+  position:relative;overflow:hidden;
+}
+.hero::before{
+  content:"";position:absolute;top:-50%;right:-20%;width:600px;height:600px;
+  background:radial-gradient(circle,rgba(255,255,255,.1) 0%,transparent 70%);
+}
+.hero h1{font-size:42px;font-weight:800;margin-bottom:16px;position:relative}
+.hero p{font-size:18px;opacity:.9;max-width:600px;margin:0 auto;line-height:1.8;position:relative}
+
+/* Section Titles */
+.section-title{
+  text-align:center;padding:60px 24px 30px;
+}
+.section-title h2{font-size:32px;font-weight:800;color:#1a1a2e;margin-bottom:8px}
+.section-title p{color:#666;font-size:16px}
+.section-title .underline{
+  width:60px;height:4px;background:linear-gradient(90deg,#0077b6,#00b4d8);
+  border-radius:4px;margin:16px auto 0;
+}
+
+/* Product Grid */
+.products-grid{
+  max-width:1200px;margin:0 auto;padding:0 24px 40px;
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:24px;
+}
+
+/* Product Card */
+.product-card{
+  background:#fff;border-radius:20px;overflow:hidden;
+  box-shadow:0 4px 20px rgba(0,0,0,.06);
+  transition:transform .3s,box-shadow .3s;
+  cursor:pointer;
+}
+.product-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 12px 40px rgba(0,119,182,.12);
+}
+.product-img{
+  height:240px;display:flex;align-items:center;justify-content:center;
+  padding:30px;background:#f0f8ff;position:relative;overflow:hidden;
+}
+.product-img img{
+  max-height:180px;max-width:100%;object-fit:contain;
+  transition:transform .4s;
+}
+.product-card:hover .product-img img{transform:scale(1.08)}
+.product-badge{
+  position:absolute;top:16px;right:16px;
+  background:linear-gradient(135deg,#0077b6,#00b4d8);
+  color:#fff;padding:6px 14px;border-radius:20px;
+  font-size:12px;font-weight:700;
+}
+.product-info{padding:20px}
+.product-name{font-size:16px;font-weight:700;color:#1a1a2e;margin-bottom:8px;line-height:1.6}
+.product-sku{font-size:13px;color:#999;margin-bottom:12px}
+.product-price-row{display:flex;align-items:center;justify-content:space-between}
+.product-price{font-size:22px;font-weight:800;color:#0077b6}
+.product-price .currency{font-size:14px;font-weight:500;margin-right:4px}
+.add-btn{
+  width:42px;height:42px;border-radius:50%;border:none;
+  background:linear-gradient(135deg,#0077b6,#00b4d8);
+  color:#fff;font-size:22px;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  transition:transform .2s,box-shadow .2s;
+}
+.add-btn:hover{transform:scale(1.1);box-shadow:0 4px 15px rgba(0,119,182,.3)}
+
+/* Ranges Section */
+.ranges{
+  max-width:1200px;margin:0 auto;padding:0 24px 60px;
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:24px;
+}
+.range-card{
+  border-radius:24px;padding:40px 30px;text-align:center;
+  position:relative;overflow:hidden;
+  transition:transform .3s,box-shadow .3s;cursor:pointer;
+  min-height:320px;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+}
+.range-card:hover{transform:translateY(-6px);box-shadow:0 12px 40px rgba(0,0,0,.15)}
+.range-card img{
+  max-height:160px;margin-bottom:20px;
+  filter:drop-shadow(0 8px 20px rgba(0,0,0,.1));
+  transition:transform .4s;
+}
+.range-card:hover img{transform:scale(1.08)}
+.range-card h3{font-size:20px;font-weight:700;color:#fff;position:relative}
+.range-card .overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(180deg,transparent 40%,rgba(0,0,0,.3) 100%);
+}
+
+/* Categories */
+.categories{
+  max-width:1200px;margin:0 auto;padding:0 24px 60px;
+  display:flex;flex-wrap:wrap;gap:16px;justify-content:center;
+}
+.cat-chip{
+  padding:14px 32px;border-radius:50px;font-size:15px;font-weight:600;
+  background:#fff;color:#333;border:2px solid #e0e0e0;
+  text-decoration:none;transition:all .3s;cursor:pointer;
+}
+.cat-chip:hover,.cat-chip.active{
+  background:#0077b6;color:#fff;border-color:#0077b6;
+  box-shadow:0 4px 15px rgba(0,119,182,.2);
+}
+
+/* Stats */
+.stats{
+  background:linear-gradient(135deg,#0077b6,#00b4d8);
+  padding:60px 24px;
+}
+.stats-inner{
+  max-width:1000px;margin:0 auto;
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:30px;
+  text-align:center;color:#fff;
+}
+.stat-num{font-size:48px;font-weight:800;margin-bottom:8px}
+.stat-label{font-size:16px;opacity:.85}
+
+/* Footer */
+footer{
+  background:#1a1a2e;color:#fff;padding:40px 24px;text-align:center;
+}
+footer p{opacity:.6;font-size:14px}
+
+/* Responsive */
+@media(max-width:768px){
+  .hero h1{font-size:28px}
+  .hero p{font-size:15px}
+  .section-title h2{font-size:24px}
+  .products-grid,.ranges{grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:16px}
+  .product-img{height:180px;padding:20px}
+  .product-name{font-size:14px}
+  .product-price{font-size:18px}
+  .range-card{min-height:240px;padding:24px 16px}
+  .stat-num{font-size:36px}
+  nav{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+  <div class="header-inner">
+    <div class="logo">نوڤا<span>ووتر</span></div>
+    <nav>
+      <a href="#" class="active">المنتجات</a>
+      <a href="#ranges-section">المجموعات</a>
+      <a href="#categories-section">الفئات</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+  <h1>اكتشف منتجاتنا</h1>
+  <p>مياه نقية بجودة عالية لكل لحظة من حياتك. اختر من مجموعتنا المتنوعة ما يناسب احتياجاتك.</p>
+</section>
+
+<!-- Best Sellers -->
+<div class="section-title">
+  <h2>الأكثر مبيعاً</h2>
+  <p>المنتجات المفضلة لعملائنا</p>
+  <div class="underline"></div>
+</div>
+
+<div class="products-grid">
+
+  <!-- Product 1 -->
+  <div class="product-card">
+    <div class="product-img">
+      <span class="product-badge">الأكثر مبيعاً</span>
+      <img src="https://novacp.novawater.com/media/catalog/product/4/0/40x0.33_snd.png" alt="مياه نوفا 330 مل">
+    </div>
+    <div class="product-info">
+      <div class="product-name">مياه نوفا، كرتون 330 مل، 40 عبوة</div>
+      <div class="product-sku">SKU: 690091</div>
+      <div class="product-price-row">
+        <div class="product-price">21.84 <span class="currency">ر.س</span></div>
+        <button class="add-btn" title="أضف للسلة">+</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 2 -->
+  <div class="product-card">
+    <div class="product-img">
+      <img src="https://novacp.novawater.com/media/catalog/product/2/4/24_1.jpg" alt="مياه نوفا 200 مل">
+    </div>
+    <div class="product-info">
+      <div class="product-name">مياه نوفا، كرتون 200 مل، 24 عبوة</div>
+      <div class="product-sku">SKU: 690063</div>
+      <div class="product-price-row">
+        <div class="product-price">14.46 <span class="currency">ر.س</span></div>
+        <button class="add-btn" title="أضف للسلة">+</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 3 -->
+  <div class="product-card">
+    <div class="product-img">
+      <img src="https://novacp.novawater.com/media/catalog/product/n/o/nova-water_-550ml-case_-24-bottles_1.jpg" alt="مياه نوفا 550 مل">
+    </div>
+    <div class="product-info">
+      <div class="product-name">مياه نوفا، كرتون 550 مل، 24 عبوة</div>
+      <div class="product-sku">SKU: 690092</div>
+      <div class="product-price-row">
+        <div class="product-price">18.16 <span class="currency">ر.س</span></div>
+        <button class="add-btn" title="أضف للسلة">+</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 4 -->
+  <div class="product-card">
+    <div class="product-img">
+      <span class="product-badge">مميز</span>
+      <img src="https://novacp.novawater.com/media/catalog/product/g/l/glass_24x250ml00002.png" alt="مياه نوفا زجاج 250 مل">
+    </div>
+    <div class="product-info">
+      <div class="product-name">مياه نوفا، كرتون 250 مل زجاج، 24 زجاجة</div>
+      <div class="product-sku">SKU: 690010</div>
+      <div class="product-price-row">
+        <div class="product-price">44.95 <span class="currency">ر.س</span></div>
+        <button class="add-btn" title="أضف للسلة">+</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Product Ranges -->
+<div class="section-title" id="ranges-section">
+  <h2>مجموعاتنا</h2>
+  <p>تشكيلة متنوعة تلبي جميع احتياجاتك</p>
+  <div class="underline"></div>
+</div>
+
+<div class="ranges">
+
+  <div class="range-card" style="background:linear-gradient(135deg,#A0D5F4,#7bc4ed)">
+    <div class="overlay"></div>
+    <img src="https://novacp.novawater.com/media/everydayRangeBlue_1.png" alt="المجموعة الأساسية" style="position:relative;z-index:1">
+    <h3 style="position:relative;z-index:1">المجموعة الأساسية</h3>
+  </div>
+
+  <div class="range-card" style="background:linear-gradient(135deg,#C5BCBF,#a89da0)">
+    <div class="overlay"></div>
+    <img src="https://novacp.novawater.com/media/glassStillRange_1.png" alt="مياه نوڤا الزجاجية" style="position:relative;z-index:1">
+    <h3 style="position:relative;z-index:1">مياه نوڤا الزجاجية</h3>
+  </div>
+
+  <div class="range-card" style="background:linear-gradient(135deg,#CFAD66,#b8963f)">
+    <div class="overlay"></div>
+    <img src="https://novacp.novawater.com/media/ar.png" alt="مجموعة مياه نوڤا الفوارة" style="position:relative;z-index:1">
+    <h3 style="position:relative;z-index:1">مجموعة مياه نوڤا الفوارة</h3>
+  </div>
+
+  <div class="range-card" style="background:linear-gradient(135deg,#5191CE,#3a7ab5)">
+    <div class="overlay"></div>
+    <img src="https://novacp.novawater.com/media/bigFormatRange_1.png" alt="المجموعة الكبيرة" style="position:relative;z-index:1">
+    <h3 style="position:relative;z-index:1">المجموعة الكبيرة</h3>
+  </div>
+
+</div>
+
+<!-- Categories -->
+<div class="section-title" id="categories-section">
+  <h2>الفئات</h2>
+  <p>تصفح حسب الفئة</p>
+  <div class="underline"></div>
+</div>
+
+<div class="categories">
+  <a class="cat-chip active" href="#">نوڤا</a>
+  <a class="cat-chip" href="#">حلول المياه الذكية</a>
+  <a class="cat-chip" href="#">موزعات المياه</a>
+  <a class="cat-chip" href="#">الخدمة والصيانة</a>
+  <a class="cat-chip" href="#">مياه فاخرة مستوردة</a>
+</div>
+
+<!-- Stats -->
+<section class="stats">
+  <div class="stats-inner">
+    <div>
+      <div class="stat-num" data-target="50">0</div>
+      <div class="stat-label">منتج متوفر</div>
+    </div>
+    <div>
+      <div class="stat-num" data-target="4">0</div>
+      <div class="stat-label">مجموعات مختلفة</div>
+    </div>
+    <div>
+      <div class="stat-num" data-target="1000">0</div>
+      <div class="stat-label">عميل سعيد</div>
+    </div>
+    <div>
+      <div class="stat-num" data-target="30">0</div>
+      <div class="stat-label">سنة خبرة</div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2026 نوڤا ووتر. جميع الحقوق محفوظة.</p>
+</footer>
+
+<script>
+// Animated counter
+function animateCounters(){
+  document.querySelectorAll('.stat-num').forEach(el=>{
+    const target=+el.dataset.target;
+    const duration=2000;
+    const step=target/((duration/16));
+    let current=0;
+    const timer=setInterval(()=>{
+      current+=step;
+      if(current>=target){current=target;clearInterval(timer)}
+      el.textContent=Math.floor(current).toLocaleString('ar-SA');
+    },16);
+  });
+}
+
+// Intersection Observer for counters
+const statsSection=document.querySelector('.stats');
+let counted=false;
+const observer=new IntersectionObserver(entries=>{
+  if(entries[0].isIntersecting&&!counted){counted=true;animateCounters()}
+},{threshold:0.3});
+observer.observe(statsSection);
+
+// Smooth scroll
+document.querySelectorAll('nav a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    e.preventDefault();
+    const target=document.querySelector(a.getAttribute('href'));
+    if(target) target.scrollIntoView({behavior:'smooth',block:'start'});
+  });
+});
+
+// Category chips
+document.querySelectorAll('.cat-chip').forEach(chip=>{
+  chip.addEventListener('click',e=>{
+    e.preventDefault();
+    document.querySelectorAll('.cat-chip').forEach(c=>c.classList.remove('active'));
+    chip.classList.add('active');
+  });
+});
+</script>
+
+</body>
+</html>
