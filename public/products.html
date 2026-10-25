@@ -98,4 +98,35 @@ body{overflow-x:hidden}
 <div class="section"><button id="collapse_4_footer_dropdown" class="title-container"><span class="title-content-wrapper"><span class="title-content">اتصل بنا</span><img class="icon-chevron" src="https://novacp.novawater.com/pub/media/cmsblock/images/chevron-down.png"></span></button><div class="content-container"><div class="link-item--mobile"><a class="footer-link" href="/ar/contact-us">أرسل ملاحظاتك</a></div><div class="link-item--mobile"><a>شارع الصحابة, حي المونسية, الرياض 13249, المملكة العربية السعودية</a></div><div class="link-item--mobile"><a style="direction:ltr;text-align:end">9200 33 445</a></div><div class="link-item--mobile"><a>info@novawater.com</a></div></div></div>
 <div style="font-size:15px;text-align:center">حافظ على ترطيبك! حمّل تطبيق مياه نوڤا اطلب الآن</div>
 <div class="body" style="margin-top:0!important"><a class="image-container link-image" href="https://onelink.to/6pnjf7" target="_blank" rel="noopener noreferrer"><img src="https://novacp.novawater.com/pub/media/cmsblock/images/App_Store.png" alt="logo" width="138" height="40"></a> <a class="image-container link-image" href="https://onelink.to/6pnjf7" target="_blank" rel="noopener noreferrer"><img src="https://novacp.novawater.com/pub/media/cmsblock/images/Google_Play_1.png" alt="logo" width="138" height="40"></a> <a class="image-container link-image" href="https://onelink.to/6pnjf7" target="_blank" rel="noopener noreferrer"><img src="https://novacp.novawater.com/pub/media/cmsblock/images/AppGallery.png" alt="logo" width="138" height="40"></a></div>
-</div><p>&nbsp;</p></div><div class="card-list" style="position:absolute;width:100%;justify-content:flex-end;display:flex;background:transparent;gap:16px;bottom:0"><span class="card-image-container"><img src="https://novacp.novawater.com/media/mada_1.jpg" alt="mada" width="35" height="24"></span> <span class="card-image-container"><img src="https://novacp.novawater.com/media/cmsblock/images/STCPay_logo_1.png" alt="stc" width="35" height="24"></span> <span class="card-image-container"><img src="https://novacp.novawater.com/media/master.jpg" alt="mastercard" width="35" height="24"></span> <span class="card-image-container"><img src="https://novacp.novawater.com/media/visa.jpg" alt="visa" width="35" height="24"></span> <span class="card-image-container"><img src="https://novacp.novawater.com/media/applepay.jpg" alt="applepay" width="35" height="24"></span> <span class="card-image-container"><img src="https://novacp.novawater.com/media/cod.jpg" alt="cod" width="35" height="24"></span></div></div><div class="footer-sub-container"><div class="footer-sub"><div class="sub-details">© 2026 نوفا. جميع الحقوق محفوظة.</div></div></div></footer></div></div></body></html>
+</div><p>&nbsp;</p></div><div class="card-list" style="position:absolute;width:100%;justify-content:flex-end;display:flex;background:transparent;gap:16px;bottom:0"><span class="card-image-container"><img src="https://novacp.novawater.com/media/mada_1.jpg" alt="mada" width="35" height="24"></span> <span class="card-image-container"><img src="https://novacp.novawater.com/media/cmsblock/images/STCPay_logo_1.png" alt="stc" width="35" height="24"></span> <span class="card-image-container"><img src="https://novacp.novawater.com/media/master.jpg" alt="mastercard" width="35" height="24"></span> <span class="card-image-container"><img src="https://novacp.novawater.com/media/visa.jpg" alt="visa" width="35" height="24"></span> <span class="card-image-container"><img src="https://novacp.novawater.com/media/applepay.jpg" alt="applepay" width="35" height="24"></span> <span class="card-image-container"><img src="https://novacp.novawater.com/media/cod.jpg" alt="cod" width="35" height="24"></span></div></div><div class="footer-sub-container"><div class="footer-sub"><div class="sub-details">© 2026 نوفا. جميع الحقوق محفوظة.</div></div></div></footer></div></div>
+<script>
+(function(){
+var sidebar=document.querySelector('.mega-menu-sidebar');
+var toggleBtn=document.querySelector('.toggle-sidebar-button');
+var exitBtn=document.querySelector('.mega-menu-sidebar__button');
+var overlay=document.createElement('div');
+overlay.style.cssText='position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);z-index:998;display:none';
+document.body.appendChild(overlay);
+function openSidebar(){sidebar.style.cssText='display:block!important;position:fixed;top:0;right:0;width:280px;height:100%;z-index:999;background:#fff;overflow-y:auto;box-shadow:-2px 0 8px rgba(0,0,0,0.2)';overlay.style.display='block';document.body.style.overflow='hidden'}
+function closeSidebar(){sidebar.style.display='none';overlay.style.display='none';document.body.style.overflow=''}
+if(toggleBtn)toggleBtn.addEventListener('click',openSidebar);
+if(exitBtn)exitBtn.addEventListener('click',closeSidebar);
+overlay.addEventListener('click',closeSidebar);
+document.querySelectorAll('.mega-menu-sidebar__item-container a').forEach(function(a){a.addEventListener('click',closeSidebar)});
+document.querySelectorAll('.title-container').forEach(function(btn){
+btn.addEventListener('click',function(){
+var content=this.nextElementSibling;
+var chevron=this.querySelector('.icon-chevron');
+if(content.style.display==='block'){content.style.display='none';if(chevron)chevron.style.transform=''}
+else{content.style.display='block';if(chevron)chevron.style.transform='rotate(180deg)'}
+})});
+document.querySelectorAll('.content-container').forEach(function(c){c.style.display='none'});
+document.querySelectorAll('.styles_addToBasketBtn__NeXOK').forEach(function(btn){
+btn.addEventListener('click',function(){
+var name=this.closest('.styles_productItem__ikSUC').querySelector('h3').textContent;
+this.textContent='✓ تمت الإضافة';this.style.background='#4CAF50';this.style.color='#fff';
+var b=this;setTimeout(function(){b.textContent='أضف الى السلة';b.style.background='';b.style.color=''},1500)
+})});
+})();
+</script>
+</body></html>
